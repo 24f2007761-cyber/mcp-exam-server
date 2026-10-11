@@ -12,7 +12,7 @@ app = FastAPI()
 async def health():
     return {"status": "ok"}
 
-
+@app.post("/")
 @app.post("/mcp")
 async def mcp(request: Request):
     body = await request.json()
